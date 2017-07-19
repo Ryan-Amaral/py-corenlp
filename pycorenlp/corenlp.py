@@ -22,7 +22,7 @@ class StanfordCoreNLP:
             '$ cd stanford-corenlp-full-2015-12-09/ \n'
             '$ java -mx4g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer')
 
-        data = text.encode()
+        data = text #.encode()
         r = requests.post(
             self.server_url, params={
                 'properties': str(properties)
