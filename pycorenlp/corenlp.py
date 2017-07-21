@@ -21,8 +21,13 @@ class StanfordCoreNLP:
             raise Exception('Check whether you have started the CoreNLP server e.g.\n'
             '$ cd stanford-corenlp-full-2015-12-09/ \n'
             '$ java -mx4g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer')
+        
+        # only encode if needed
+        try:
+            data = text.encode()
+        except:
+            data = text
 
-        data = text #.encode()
         r = requests.post(
             self.server_url, params={
                 'properties': str(properties)
