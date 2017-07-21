@@ -1,3 +1,6 @@
+## My Contribution in this Fork
+I removed a call to encode inside the annotate function so that text that is already encoded before being passed into the function will not crash it.
+
 # py-corenlp
 Python wrapper for Stanford CoreNLP.  This simply wraps the API from the server included with CoreNLP 3.6.0.  See the CoreNLP server [API documentation](http://stanfordnlp.github.io/CoreNLP/corenlp-server.html#api-documentation) for details.
 
